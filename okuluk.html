@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilimgoo - Оқулықтар</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* ===== HEADER STYLE ===== */
+    header {
+      background-color: #5e2c7c;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding-left: 0;
+      margin: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fcd3ff;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .auth-buttons a {
+      background-color: white;
+      color: #5e2c7c;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .auth-buttons a:hover {
+      background-color: #eee;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .auth-buttons {
+        margin-top: 10px;
+      }
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .category a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #5e2c7c;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      color: #555;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #5e2c7c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #ffd6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="log1.jpg" alt="Bilimgoo Logo" />
+      <h1>Bilimgoo</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="bilimgo.html">Басты бет</a></li>
+        <li><a href="окулыктар.html">Оқулықтар</a></li>
+        <li><a href="убт.html">ҰБТ</a></li>
+        <li><a href="professia.html">Мамандықтар</a></li>
+        <li><a href="#">Кеңестер</a></li>
+        <li><a href="#">Мотивация</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#">Кіру</a>
+      <a href="#">Тіркелу</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <h1>Оқулықтар мен ресурстар</h1>
+    <div class="categories">
+      <div class="category">
+        <h3>📘 Мектеп оқулықтары</h3>
+        <a href="https://okulyk.kz/chat/">Қарау</a>
+      </div>
+      <div class="category">
+        <h3>🎥 Видеосабақтар</h3>
+        <a href="#">Қарау</a>
+      </div>
+      <div class="category">
+        <h3>📂 Материалдар</h3>
+        <a href="#">Қарау</a>
+      </div>
+      <div class="category">
+        <h3>📑 Тест сұрақтары</h3>
+        <a href="#">ҰБТ & Мектеп тесттері</a>
+      </div>
+      <div class="category">
+        <h3>❗ Жиі кездесетін қателер</h3>
+        <a href="#">Алдын алу жолдары</a>
+      </div>
+      <div class="category">
+        <h3>📖 Әдеби кітаптар</h3>
+        <a href="#">Оқу</a>
+      </div>
+      <div class="category">
+        <h3>📚 Онлайн кітаптар</h3>
+        <a href="onlinebook.html">Оқу</a>
+      </div>
+    </div>
+    <p class="quote">Бүгін кітап ермегің болса, ертеңгі ақыл айтар азығың болар.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Сайттағы барлық ақпарат білім мақсатында берілген. © 2025 Bilimgoo
+  </footer>
+
+</body>
+</html>

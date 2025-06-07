@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bilimgoo - ҰБТ Басты бет</title>
+  <link rel="stylesheet" href="ubt-style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="log1.jpg" alt="Bilimgoo Logo" />
+    <h1>Bilimgoo</h1>
+  </div>
+  
+  <button id="menu-toggle" aria-label="Менюны ашу/жабу">&#9776;</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="bilimgo.html">Басты бет</a></li>
+      <li><a href="okuluk.html">Оқулықтар</a></li>
+      <li><a href="ubt.html">ҰБТ</a></li>
+      <li><a href="professia.html">Профессия</a></li>
+      <li><a href="#">Кеңестер</a></li>
+       <li><a href="#">Мотивация</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth-buttons">
+    <a href="#">Кіру</a>
+    <a href="#">Тіркелу</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Сол жақ багана: пәндерді таңдау -->
+  <aside class="sidebar">
+    <h2>Пәндер</h2>
+    <ul id="subject-list">
+      <li data-subject="about" class="active">ҰБТ туралы</li>
+      <li data-subject="math">Математика</li>
+      <li data-subject="kazakh">Қазақ тілі</li>
+      <li data-subject="russian">Орыс тілі</li>
+      <li data-subject="physics">Физика</li>
+      <li data-subject="chemistry">Химия</li>
+      <li data-subject="biology">Биология</li>
+      <li data-subject="history">Тарих</li>
+      <li data-subject="geography">География</li>
+      <li data-subject="informatics">Информатика</li>
+    </ul>
+  </aside>
+
+  <!-- Негізгі контент -->
+  <main class="content" id="content-area">
+
+    <!-- Бастапқыда "ҰБТ туралы" көрсетіледі -->
+    <section id="about" class="content-section active">
+      <h2>ҰБТ туралы қысқаша ақпарат</h2>
+      <p>Ұлттық бірыңғай тестілеу (ҰБТ) – бұл Қазақстандағы мектеп бітірушілер үшін жоғары оқу орнына түсуге арналған маңызды сынақ. ҰБТ арқылы білім деңгейіңді дәлелдеп, болашақ мамандығыңды таңдайсың. Бұл тесттің маңызы зор, себебі ол сенің болашақтағы мүмкіндіктеріңді анықтайды.</p>
+    </section>
+
+    <section id="tests" class="content-section">
+      <h2>Тесттер бөлімдері</h2>
+      <div class="test-block" data-subject="math">
+        <h3>Математика</h3>
+        <p>Алгебра, геометрия және есептер. Тест саны: 30. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="kazakh">
+        <h3>Қазақ тілі</h3>
+        <p>Грамматика, синтаксис, сөздік қор. Тест саны: 25. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="russian">
+        <h3>Орыс тілі</h3>
+        <p>Тілдік дағдылар мен мәтіндерді түсіну. Тест саны: 25. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="physics">
+        <h3>Физика</h3>
+        <p>Негізгі заңдар мен формулалар. Тест саны: 20. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="chemistry">
+        <h3>Химия</h3>
+        <p>Заттардың қасиеттері мен реакциялар. Тест саны: 20. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="biology">
+        <h3>Биология</h3>
+        <p>Организмдер, экология және генетика. Тест саны: 20. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="history">
+        <h3>Тарих</h3>
+        <p>Қазақстан және әлем тарихы. Тест саны: 25. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="geography">
+        <h3>География</h3>
+        <p>Жер және табиғи процестер. Тест саны: 15. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+      <div class="test-block" data-subject="informatics">
+        <h3>Информатика</h3>
+        <p>Негізгі бағдарламалау және алгоритмдер. Тест саны: 15. Деңгейлері: жеңіл, орта, қиын.</p>
+        <button class="start-test-btn">Тестке кіру</button>
+      </div>
+    </section>
+
+    <section id="universities" class="content-section">
+      <h2>Университеттер бөлімі</h2>
+      <p>Бұл жерде университеттер тізімі, рейтингтері, шекті балдары және оқытатын бағыттары көрсетіледі.</p>
+      <button id="go-to-universities">Университеттерге өту</button>
+    </section>
+
+    <section id="results" class="content-section">
+      <h2>Тест нәтижелерін талдау</h2>
+      <p>Тест тапсырғаннан кейін нәтижелеріңізді көріп, қай тақырыпқа көбірек көңіл бөлу керек екенін біліңіз.</p>
+    </section>
+
+    <section id="schedule" class="content-section">
+      <h2>ҰБТ кестесі және жаңалықтар</h2>
+      <p>ҰБТ тапсыру мерзімдері, соңғы жаңалықтар мен өзгерістерді осы бөлімнен бақылаңыз.</p>
+    </section>
+
+    <section id="motivation" class="content-section">
+      <h2>Мотивация блогы</h2>
+      <p>Табысты түлектердің пікірлері мен мотивациялық сөздер.</p>
+    </section>
+
+    <section id="faq" class="content-section">
+      <h2>Жиі қойылатын сұрақтар (FAQ)</h2>
+      <p>ҰБТ туралы жиі қойылатын сұрақтар мен жауаптар.</p>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="ubt.js"></script>
+</body>
+</html>

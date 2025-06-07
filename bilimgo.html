@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilimgoo</title>
+  <style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .banner {
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .content {
+    animation: slideUp 2s ease-out;
+  }
+
+  nav ul.show li {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .auth-buttons a {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+  }
+
+  .auth-buttons a:hover {
+    background-color: #e2c6f0;
+    transform: scale(1.05);
+  }
+
+  nav ul li a {
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #ffe2ff;
+  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('phonbil.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    header {
+      background-color: #5e2c7c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-buttons a {
+      background-color: white;
+      color: #5e2c7c;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .auth-buttons a:hover {
+      background-color: #ddd;
+    }
+
+    /* Гамбургер батырмасы */
+    #menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #5e2c7c;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 1000;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      .auth-buttons {
+        display: none;
+      }
+    }
+
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2016/11/29/04/00/children-1869265_1280.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+      text-align: center;
+    }
+
+    .content {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+
+    .content img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .content-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+    }
+
+    .content ul {
+      list-style-type: square;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #5e2c7c;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 45px;
+    }
+
+    footer a {
+      color: #f7d5ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="log1.jpg" alt="Bilimgoo Logo" />
+    <h1>Bilimgoo</h1>
+  </div>
+  
+  <button id="menu-toggle" aria-label="Менюны ашу/жабу">&#9776;</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="bilimgo.html">Басты бет</a></li>
+      <li><a href="okuluk.html">Оқулықтар</a></li>
+      <li><a href="ubt.html">ҰБТ</a></li>
+      <li><a href="professia.html">Профессия</a></li>
+      <li><a href="#">Кеңестер</a></li>
+       <li><a href="#">Мотивация</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth-buttons">
+    <a href="#">Кіру</a>
+    <a href="#">Тіркелу</a>
+  </div>
+</header>
+
+<div class="banner">
+  Білім – болашақтың кілті!
+</div>
+
+<div class="content">
+  <img src="cat.jpg" alt="Оқу процесі" />
+  <div class="content-text">
+    <h2>Қош келдіңіз!</h2>
+    <ul>
+      <li>Бұл сайтта білім бағытына қатысты көптеген пайдалы ақпараттар таба аласыз</li>
+      <li>Қазақстандағы ҰБТ-ның маңыздылығы мен оған дайындалуға көмек</li>
+      <li>Мектеп бағдарламасын әрі қарай дамытуға көмек</li>
+      <li>Мотивациялар мен сіздерге көмектесетін лайфхактар мен кеңестер</li>
+      <li>Ең маңыздысы — мамандық таңдауда дұрыс шешім қабылдауға көмектесу</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  Сайт жасау үшін көптеген ақпараттар жан-жақтан алынған. Алдын ала алғыс білдіремін.
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

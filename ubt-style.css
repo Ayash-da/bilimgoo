@@ -1,0 +1,297 @@
+/* Анимациялар */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Базалық стильдер */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('phonbil.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f0e9ff; /* Ашық түс мәтінге */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px); /* фонды жұмсартады */
+}
+
+header {
+  background-color: #5e2c7c;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+   nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-buttons a {
+      background-color: white;
+      color: #5e2c7c;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .auth-buttons a:hover {
+      background-color: #ddd;
+    }
+
+    /* Гамбургер батырмасы */
+    #menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #5e2c7c;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 1000;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      .auth-buttons {
+        display: none;
+      }
+    }
+/* Баннер */
+.banner {
+  background: url('https://cdn.pixabay.com/photo/2016/11/29/04/00/children-1869265_1280.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+  text-align: center;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Негізгі контейнер */
+.container {
+  display: flex;
+  flex: 1;
+  padding: 20px 30px;
+  gap: 25px;
+  background-color: rgba(94, 44, 124, 0.7); /* ашық фиолетовый фон */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(164, 139, 227, 0.5);
+}
+
+/* Бүйірлік меню (Sidebar) */
+.sidebar {
+  background-color: rgb(94, 44, 124);/* ашық жұмсақ фиолетовый */
+  width: 220px;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 0 10px rgba(94, 44, 124, 0.7);
+  user-select: none;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #a48be3;
+  padding-bottom: 8px;
+  color: #f0e9ff;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 transparent;
+  color: #f0e9ff;
+}
+
+.sidebar ul li:hover {
+  background-color: #d3bbff;
+  box-shadow: inset 0 0 8px #a48be3;
+  color: white;
+}
+
+.sidebar ul li.active {
+  background-color: #aa88e1;
+  color: #2f1a4f;
+  box-shadow: inset 0 0 12px #7d55c7;
+}
+
+/* Негізгі контент */
+.content {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.9); /* ашық фон */
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 0 15px rgba(164, 139, 227, 0.5);
+  overflow-y: auto;
+  max-height: 80vh;
+  animation: slideUp 2s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: #3e1f6a;
+}
+
+.content img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.content-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  color: #5e2c7c;
+}
+
+.content ul {
+  list-style-type: square;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.test-block {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px #c5a5f9;
+}
+
+.test-block h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #5e2c7c;
+}
+
+.test-block p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #3e1f6a;
+}
+
+.start-test-btn,
+#go-to-universities {
+  background-color: #ffffff;
+  border: none;
+  color: rgb(103, 19, 122);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #a48be3;
+  transition: background-color 0.3s ease;
+}
+
+.start-test-btn:hover,
+#go-to-universities:hover {
+  background-color: #a484d8;
+  box-shadow: 0 0 15px #d0c1ff;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5e2c7c;
+}
+
+footer {
+  background-color: #5e2c7c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 45px;
+}
+
+footer a {
+  color: #f7d5ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

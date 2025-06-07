@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профессиялар</title>
+  <link rel="stylesheet" href="professia.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="log1.jpg" alt="Логотип">
+      <h1>Bilimgoo</h1>
+    </div>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="bilimgo.html">Басты бет</a></li>
+        <li><a href="okuluk.html">Оқулықтар</a></li>
+        <li><a href="ubt.html">ҰБТ</a></li>
+        <li><a href="professia.html" class="active">Профессия</a></li>
+        <li><a href="advice.html">Кеңестер</a></li>
+         <li><a href="#">Мотивация</a></li>
+      </ul>
+    </nav>
+       <div class="auth-buttons">
+      <a href="#">Кіру</a>
+      <a href="#">Тіркелу</a>
+    </div>
+  </header>
+
+  <section class="filter-section">
+    <h2>Мамандықты таңдаңыз</h2>
+    <div class="filters">
+      <select id="category-filter">
+        <option value="all">Барлық салалар</option>
+        <option value="med">Медицина</option>
+        <option value="it">IT</option>
+        <option value="edu">Педагогика</option>
+        <option value="law">Заң</option>
+      </select>
+      <select id="subject-filter">
+        <option value="all">Барлық пәндер</option>
+        <option value="bio">Биология</option>
+        <option value="math">Математика</option>
+        <option value="phys">Физика</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <div class="card" data-category="med" data-subject="bio">
+      <h3>Дәрігер</h3>
+      <p><strong>Сипаттама:</strong> Адам денсаулығын емдеу және сақтау.</p>
+      <p><strong>Қажетті пәндер:</strong> Биология, Химия</p>
+      <p><strong>ЖОО:</strong> ҚММУ, Астана Медицина Университеті</p>
+      <p><strong>Орташа жалақы:</strong> 300 000 тг</p>
+      <p><strong>Сұраныс:</strong> Өте жоғары</p>
+      <p><strong>Лайықты:</strong> Адамдарға көмектесуді жақсы көретіндерге</p>
+    </div>
+
+    <div class="card" data-category="it" data-subject="math">
+      <h3>Программист</h3>
+      <p><strong>Сипаттама:</strong> Компьютерлік жүйелерді жасап, дамытатын маман.</p>
+      <p><strong>Қажетті пәндер:</strong> Математика, Информатика</p>
+      <p><strong>ЖОО:</strong> SDU, Astana IT University</p>
+      <p><strong>Орташа жалақы:</strong> 500 000 тг</p>
+      <p><strong>Сұраныс:</strong> Жоғары</p>
+      <p><strong>Лайықты:</strong> Логикасы мықты, технологияны жақсы көретіндерге</p>
+    </div>
+  </section>
+
+  <script src="professia.js"></script>
+</body>
+</html>

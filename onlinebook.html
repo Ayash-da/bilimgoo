@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bilimgoo - Кітаптар</title>
+  <link rel="stylesheet" href="onlinebook.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>Bilimgoo - Кітаптар коллекциясы</header>
+
+  <nav id="genre-nav">
+    <button class="active" data-genre="love">Махаббат романы</button>
+    <button data-genre="fantasy">Фэнтези</button>
+    <button data-genre="scifi">Ғылыми фантастика</button>
+  </nav>
+
+  <main id="books-list"></main>
+  <section class="idea-slider">
+        <div class="slider">
+          <img id="slider-image" src="" alt="Bilimgoo слайдер" />
+        </div>
+      </section>
+      
+  <section id="popular">
+    <h2>Танымал кітаптар</h2>
+    <div id="popular-books" class="book-grid"></div>
+  </section>
+  <div id="container"></div>
+  <div id="popularContainer"></div>
+  
+  <!-- Modal -->
+  <div id="auth-modal" class="modal-backdrop" style="display:none;">
+    <div class="auth-modal">
+      <button id="close-auth" class="close-btn">&times;</button>
+      <h2 id="auth-title">Кіру</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Пайдаланушы аты" required />
+        <input type="password" id="password" placeholder="Құпиясөз" required />
+        <button type="submit" class="btn">Кіру</button>
+        <p><a href="#" id="switch-auth" style="color:#dda0ff;">Тіркелу</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Кіру батырмасы -->
+  <button id="open-auth" class="btn fixed-btn">Кіру</button>
+
+  <script src="onlinebook.js"></script>
+</body>
+</html>
